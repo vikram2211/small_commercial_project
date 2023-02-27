@@ -22,7 +22,9 @@ const authentication = async function (req, res, next) {
 }
 const authorization = async function (req, res, next) {
     let tokenUserId = req.userId
+    console.log(tokenUserId)
     let userId = req.params.userId
+    console.log(userId)
 
     //if (!validator.isValidObjectId(userId)) return res.status(400).send({ status: false, message: "userId is not valid" });
 
@@ -36,3 +38,4 @@ const authorization = async function (req, res, next) {
 
 module.exports.authentication = authentication;
 module.exports.authorization = authorization;
+

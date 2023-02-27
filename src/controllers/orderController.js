@@ -41,7 +41,7 @@ const createOrder = async function (req, res) {
 
 
 const orderList = async function (req, res) {
-     const userId = req.params;
+     const userId = req.params.userId;
     const data = req.body;
 
     const { orderId } = data;

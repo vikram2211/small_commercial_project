@@ -9,7 +9,7 @@ const {authentication, authorization} = require('../middleware/auth');
 
 
 router.post('/register', userController.registerUser);
-router.post('/login', authentication,userController.loginUser);
+router.post('/login',userController.loginUser);
 
 router.post('/createProduct', productController.createProduct);
 router.get('/getProduct', productController.productList);
@@ -17,8 +17,8 @@ router.get('/getProduct', productController.productList);
 router.post('/users/:userId/cart',authentication, cartController.createCart);
 router.get('/users/:userId/cart', authentication,authorization,cartController.getCartDetails);
 
-router.post('/users/:userId/createOrder',authorization, orderController.createOrder);
-router.get('/users/:userId/getList',authorization, orderController.orderList);
+router.post('/users/:userId/createOrder', orderController.createOrder);
+router.get('/users/:userId/getList', orderController.orderList);
 
 
 

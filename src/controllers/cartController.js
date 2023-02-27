@@ -89,6 +89,7 @@ const getCartDetails = async function (req, res) {
     } 
 
     let update = verifyUser.items
+    //console.log(update);
 
     let itemData = update.map(({productId,quantity})=>{
         return {productId, quantity};
