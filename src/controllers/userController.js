@@ -83,6 +83,7 @@ const loginUser = async function (req, res) {
     let token = jwt.sign({
         userId: checkUser._id
     }, "secret key")
+   
     return res.status(200).send({ status: true, message: "User loged-In sucessfully", data: { _id: checkUser._id, token: token } })
 
 }
